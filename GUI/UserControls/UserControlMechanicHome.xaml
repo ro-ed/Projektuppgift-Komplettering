@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="GUI.UserControls.MechanicHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projektuppgift.GUI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"   
+             d:DesignHeight="530" d:DesignWidth="754" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="754" MaxHeight="530">
+    <Grid x:Name="MechanicView">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="-10,0,0,0" Height="530" Width="774">
+            <StackPanel Width="754" Height="530" Margin="10">
+                <TextBlock Text="Mechanics in the system" FontFamily="Century Gothic" FontSize="35" Margin="25 0 0 50" HorizontalAlignment="Center">
+
+                </TextBlock>
+                
+                    <ListView Name="lv_data" Width="730" Height="310" Margin="10 20 10 0" SelectionChanged="lv_data_SelectionChanged">
+                    <ListView.Resources>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                    <GridView x:Name="List_Item">
+                        <GridViewColumn DisplayMemberBinding="{Binding FirstName}" Header="First name" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding SurName}" Header="Surname" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding DateOfBirth}" Header="Date of birth" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding DateOfEmployment}" Header="Date of employment" Width="200"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding EndDate}" Header="End date" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding MechID}" Header="ID" Width="350"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding CanFixEngines}" Header="CFMotor" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding CanFixTires}" Header="CFTires" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding CanFixBrakes}" Header="CFBrakes" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding CanFixWindshields}" Header="CFWS" Width="150"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding CanFixVehicleBody}" Header="CFVB" Width="150"></GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+
+
+
+            </ListView>
+                
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Width="754" Height="530" Margin="10">
+            <TextBlock Text="CF = Can Fix | WS = Windshield | VB = Vehicle Body" FontFamily="Century Gothic" FontSize="16" Margin="40 80 -250 0" HorizontalAlignment="Center" Width="405">
+
+            </TextBlock>
+            <Button x:Name="ChangeToAdd" Width="160" Height="40" Margin="0 350 550 0" Content="GO TO ADD MENU" Foreground="#FF222222" Click="ChangeToAdd_Click">
+                
+            </Button>
+            
+        </StackPanel>
+        <Button x:Name="DeleteMech" Width="160" Height="40" Margin="0 430 140 0" Content="DELETE MECHANIC" Foreground="#FF222222" Click="DeleteMech_Click"></Button>
+        <Button x:Name="ChangeToEdit" Width="110" Height="40" Margin="0 430 -250 0" Content="EDIT MENU" Foreground="#FF222222" Click="ChangeToEdit_Click"></Button>
+       
+
+
+
+
+    </Grid>
+</UserControl>
+

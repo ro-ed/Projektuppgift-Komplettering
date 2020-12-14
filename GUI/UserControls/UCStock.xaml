@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="GUI.UserControls.UCStock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GUI.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="754">
+    <Grid x:Name="StockView">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="-10,0,0,0" Height="530" Width="774">
+            <StackPanel Width="754" Height="530" Margin="10">
+                <TextBlock Text="Stock" FontFamily="Century Gothic" FontSize="35" Margin="25 0 0 50" HorizontalAlignment="Center">
+
+                </TextBlock>
+
+                <StackPanel x:Name="TheStockView" VerticalAlignment="Center" Width="720" HorizontalAlignment="Left" Margin="20 -50 10 10" Height="250">
+                    <TextBlock Text="Car" FontWeight="ExtraBold" HorizontalAlignment="Center" FontSize="22" Margin="-150 0 0 0"></TextBlock>
+                    <TextBlock Width="150" Text="Tires:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                    <TextBlock x:Name="tboldFirst" Width="100" TextAlignment="Center" FontSize="20" Margin="-150 -26 0 0">               
+                    <Run Text="{Binding CarTires}"/>
+                    </TextBlock>
+                    <TextBlock Width="150" Text="Brakes:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                    <TextBlock x:Name="tbBrakes" Width="100" Text="{Binding CarBrakes}" TextAlignment="Center" FontSize="20" Margin="-150 -26 0 0"></TextBlock>
+                    <TextBlock Width="150" Text="Engines:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                    <TextBlock x:Name="tbMotors" Width="100" Text="{Binding CarEngines}" TextAlignment="Center" FontSize="20" Margin="-150 -26 0 0"></TextBlock>
+                    <TextBlock Width="150" Text="Windshields:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                    <TextBlock x:Name="tbWS" Width="100" Text="{Binding CarWindshields}" TextAlignment="Center" FontSize="20" Margin="-150 -26 0 0"></TextBlock>
+                    <TextBlock Width="150" Text="Vehicle bodies:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                    <TextBlock x:Name="tbVB" Width="100" Text="{Binding CarVehicleBodies}" TextAlignment="Center" FontSize="20" Margin="-150 -26 0 0"></TextBlock>
+                    <TextBlock Text="MC" FontWeight="ExtraBold" HorizontalAlignment="Center" FontSize="22" Margin="100 -400 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="MC1" Width="100" Text="{Binding MCTires}" TextAlignment="Center"  FontSize="20" Margin="100 -326 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="MC2" Width="100" Text="{Binding MCBrakes}" TextAlignment="Center" FontSize="20" Margin="100 -250 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="MC3" Width="100" Text="{Binding MCEngines}" TextAlignment="Center" FontSize="20" Margin="100 -174 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="MC4" Width="100" Text="{Binding MCWindshields}" TextAlignment="Center" FontSize="20" Margin="100 -98 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="MC5" Width="100" Text="{Binding MCVehicleBodies}" TextAlignment="Center" FontSize="20" Margin="100 -28 0 0" Height="30"></TextBlock>
+                    <TextBlock Text="Bus" FontWeight="ExtraBold" HorizontalAlignment="Center" FontSize="22" Margin="350 -405 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="BUS1" Width="100" Text="{Binding BusTires}" TextAlignment="Center" FontSize="20" Margin="350 -330 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="BUS2" Width="100" Text="{Binding BusBrakes}" TextAlignment="Center" FontSize="20" Margin="350 -254 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="BUS3" Width="100" Text="{Binding BusEngines}" TextAlignment="Center" FontSize="20" Margin="350 -178 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="BUS4" Width="100" Text="{Binding BusWindshields}" TextAlignment="Center" FontSize="20" Margin="350 -102 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="BUS5" Width="100" Text="{Binding BusVehicleBodies}" TextAlignment="Center" FontSize="20" Margin="350 -30 0 0" Height="30"></TextBlock>
+                    <TextBlock Text="Truck" FontWeight="ExtraBold" HorizontalAlignment="Center" FontSize="22" Margin="600 -405 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="TRUCK1" Width="100" Text="{Binding TruckTires}" TextAlignment="Center" FontSize="20" Margin="600 -330 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="TRUCK2" Width="100" Text="{Binding TruckBrakes}" TextAlignment="Center" FontSize="20" Margin="600 -254 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="TRUCK3" Width="100" Text="{Binding TruckEngines}" TextAlignment="Center" FontSize="20" Margin="600 -178 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="TRUCK4" Width="100" Text="{Binding TruckWindshields}" TextAlignment="Center" FontSize="20" Margin="600 -102 0 0" Height="30"></TextBlock>
+                    <TextBlock x:Name="TRUCK5" Width="100" Text="{Binding TruckVehicleBodies}" TextAlignment="Center" FontSize="20" Margin="600 -30 0 0" Height="30"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="Out of inventory? Order more here!" TextAlignment="Center" FontSize="22" Margin="-750 240 0 0" Width="400" Height="150"></TextBlock>
+            <ComboBox x:Name="InvComboBox" Margin="-990 250 0 0" Width="100" SelectionChanged="InvComboBox_SelectionChanged">
+                <ComboBoxItem Content="CarTires"></ComboBoxItem>
+                <ComboBoxItem Content="CarBrakes"></ComboBoxItem>
+                <ComboBoxItem Content="CarEngines"></ComboBoxItem>
+                <ComboBoxItem Content="CarWindshields"></ComboBoxItem>
+                <ComboBoxItem Content="CarVehicle bodies"></ComboBoxItem>
+                <ComboBoxItem Content="MCTires"></ComboBoxItem>
+                <ComboBoxItem Content="MCBrakes"></ComboBoxItem>
+                <ComboBoxItem Content="MCEngines"></ComboBoxItem>
+                <ComboBoxItem Content="MCWindshields"></ComboBoxItem>
+                <ComboBoxItem Content="MCVehicle bodies"></ComboBoxItem>
+                <ComboBoxItem Content="BusTires"></ComboBoxItem>
+                <ComboBoxItem Content="BusBrakes"></ComboBoxItem>
+                <ComboBoxItem Content="BusEngines"></ComboBoxItem>
+                <ComboBoxItem Content="BusWindshields"></ComboBoxItem>
+                <ComboBoxItem Content="BusVehicle bodies"></ComboBoxItem>
+                <ComboBoxItem Content="TruckTires"></ComboBoxItem>
+                <ComboBoxItem Content="TruckBrakes"></ComboBoxItem>
+                <ComboBoxItem Content="TruckEngines"></ComboBoxItem>
+                <ComboBoxItem Content="TruckWindshields"></ComboBoxItem>
+                <ComboBoxItem Content="TruckVehicle bodies"></ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="tbAmount" Margin="-550 228 0 0" Width="80" Height="50" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Enter amount"></TextBox>
+            <Button x:Name="StockAdd" Width="110" Height="40" Margin="-1000 430 -250 0" Content="ADD" Foreground="#FF222222" Click="StockAdd_Click"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

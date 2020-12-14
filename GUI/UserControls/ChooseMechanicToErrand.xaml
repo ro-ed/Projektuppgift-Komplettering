@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="GUI.UserControls.ChooseMechanicToErrand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projektuppgift.GUI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"             
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="754" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="754" MaxHeight="530">
+    <Grid x:Name="ChooseMechanic">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="-10,0,0,0" Height="530" Width="774">
+            <StackPanel Width="754" Height="530" Margin="10">
+                <TextBlock Text="Choose Mechanic" FontFamily="Century Gothic" FontSize="35" Margin="0,10,0,0" HorizontalAlignment="Center" Height="44">
+
+                </TextBlock>
+                <Button x:Name="GoBackButton" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="#FFFF5500" Margin="-650 -40 0 0" Click="GoBackButton_Click">
+                    <materialDesign:PackIcon Kind="ArrowBackCircle" Width="30" Height="30" Foreground="#FFFF5500" ></materialDesign:PackIcon>
+                </Button>
+                <TextBlock Width="100" Height="20" Margin="-510 -40 0 0" Text="GO BACK"></TextBlock>
+                <StackPanel Height="462" Width="754" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <ListView x:Name="MechanicChoose"  Height="380" Margin="20,0,20,0" SelectionChanged="MechanicChoose_SelectionChanged">
+                        <ListView.Resources>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.View>
+                        <GridView x:Name="Mechanic_List">
+                                <GridViewColumn DisplayMemberBinding="{Binding FirstName}" Header="First name" Width="150"></GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding SurName}" Header="Surname" Width="150"></GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding CanFixBrakes}" Header="Brakes" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding CanFixEngines}" Header="Engines" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding CanFixTires}" Header="CanFixTires" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding CanFixWindshields}" Header="CanFixWindshields" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding CanFixVehicleBody}" Header="CanFixVehicleBody" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding ErrandAmount}" Header="ActiveErrands" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding MechID}" Header="ID" Width="200"/>
+                            
+                        </GridView>
+                    </ListView.View>
+                    </ListView>
+                    <Button x:Name="AssignMechanicToErrand" Margin="0 12 60 0" Width="155" Content="Choose mechanic" Foreground="#FF222222" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="AssignMechanicToErrand_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+       
+    </Grid>
+</UserControl>

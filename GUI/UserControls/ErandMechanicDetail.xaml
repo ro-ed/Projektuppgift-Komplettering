@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="GUI.UserControls.ErandMechanicDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projektuppgift.GUI.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="754" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid x:Name="MechanicViewer">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Height="530" Width="754">
+            <StackPanel x:Name="spDetailView" VerticalAlignment="Bottom" Width="380" Margin="200,-50,10,10" Height="476">
+                <TextBlock Width="100" Text="Details" TextAlignment="Center" FontSize="26" HorizontalAlignment="Left"></TextBlock>
+                <TextBlock Width="150" Text="Firstname:" TextAlignment="Left" FontSize="20" Margin="-200,30,0,0" VerticalAlignment="Stretch"></TextBlock>
+                <TextBlock x:Name="tboldFirst" Width="150" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0">               
+                    <Run Text="{Binding FirstName}"/>
+                </TextBlock>
+                <TextBlock Width="150" Text="Surname:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldSur" Width="150" Text="{Binding SurName}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="Date of birth:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldBirth" Width="150" Text="{Binding DateOfBirth}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="200" Text="Date of employment:" TextAlignment="Left" FontSize="20" Margin="-150 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldEmploy" Width="150" Text="{Binding DateOfEmployment}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="200" Text="Employment ends:" TextAlignment="Left" FontSize="20" Margin="-150 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldEmployEnd" Width="150" Text="{Binding EndDate}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="MechID:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldMechID" Width="250" Text="{Binding MechID}" TextAlignment="Left" FontSize="12" Margin="130 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="CFE:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldCFE" Width="150" Text="{Binding CanFixEngines}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="CFT:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldCFT" Width="150" Text="{Binding CanFixTires}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="CFB:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldCFB" Width="150" Text="{Binding CanFixBrakes}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="CFWS:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldCFWS" Width="150" Text="{Binding CanFixWindshields}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+                <TextBlock Width="150" Text="CFVB:" TextAlignment="Left" FontSize="20" Margin="-200 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldCFVB" Width="150" Text="{Binding CanFixVehicleBody}" TextAlignment="Left" FontSize="20" Margin="200 -26 0 0"></TextBlock>
+            </StackPanel>
+            <Button x:Name="EditGoBackButton" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="#FFFF5500" Margin="-1050,-450,0,0" Click="EditGoBackButton_Click" HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="ArrowBackCircle" Width="30" Height="30" Foreground="#FFFF5500" ></materialDesign:PackIcon>
+
+            </Button>
+            <TextBlock Width="100" Height="20" Margin="-900,-450,0,0" Text="GO BACK"></TextBlock>
+            <TextBlock Text="CF = Can Fix | WS = Windshield | VB = Vehicle Body" FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Left" Width="405" Margin="-245,0,0,0"></TextBlock>
+            
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</UserControl>

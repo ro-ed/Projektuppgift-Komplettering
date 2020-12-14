@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="GUI.UserControls.EditErrand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"           
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GUI.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="754">
+    <Grid x:Name="EditErrandView" Width="754" Height="530">
+        <ScrollViewer HorizontalAlignment="Left" Width="400" Margin="0,64,0,58">
+            <StackPanel Width="754" HorizontalAlignment="Left">
+
+
+                <TextBlock Width="150" Text="Errand name:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldErrandName" Width="150" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0">               
+                    <Run Text="{Binding ErrandName}"/>
+                </TextBlock>
+                <TextBlock Width="150" Text="Start date:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldStartDate" Width="150" Text="{Binding ErrandStartDate}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="End date:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldEndDate" Width="150" Text="{Binding ErrandEndDate}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Status:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldStatus" Width="150" Text="{Binding ErrandStatus}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Errand ID:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldErrandID" Width="250" Text="{Binding ErrandID}" TextAlignment="Left" FontSize="12" Margin="-270 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Components:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0" HorizontalAlignment="Stretch"></TextBlock>
+                <TextBlock x:Name="tboldComponents" Width="150" Text="{Binding ComponentsNeeded}" TextAlignment="Left" FontSize="20" Margin="-250,-26,0,0"></TextBlock>
+
+                <TextBlock Width="150" Text="Amount:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldAmount" Width="150" Text="{Binding Amount}" TextAlignment="Left" FontSize="20" Margin="-250,-26,0,0"></TextBlock>
+
+                <TextBlock Width="150" Text="Vehicle:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldVehicle" Width="150" Text="{Binding TypeOfVehicle}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="190" Text="Type of car:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldTypeOfCar" Width="150" Text="{Binding TypOfCar}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Model:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldModel" Width="150" Text="{Binding ModelName}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Reg number:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldRegNr" Width="150" Text="{Binding RegistrationNumber}" TextAlignment="Left" FontSize="20" Margin="-250,-26,0,0"></TextBlock>
+
+                <TextBlock Width="150" Text="Odometer:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldOdometer" Width="150" Text="{Binding Odometer}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="190" Text="Registration date:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldRegDate" Width="150" Text="{Binding RegistrationDate}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Propellant:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldPropellant" Width="150" Text="{Binding Propellant}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="190" Text="Has towbar:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldTowbar" Width="150" Text="{Binding HasTowbar}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="190" Text="Max passengers:" TextAlignment="Left" FontSize="20" Margin="-550 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldMaxPass" Width="150" Text="{Binding MaxNrPassengers}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Max load:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldMaxLoad" Width="150" Text="{Binding MaxLoad}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+
+                <TextBlock Width="150" Text="Description:" TextAlignment="Left" FontSize="20" Margin="-590 10 0 0"></TextBlock>
+                <TextBlock x:Name="tboldDescription" Width="150" Text="{Binding Description}" TextAlignment="Left" FontSize="20" Margin="-250 -26 0 0"></TextBlock>
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+        <ScrollViewer HorizontalAlignment="Right" Width="350" Margin="0,64,0,58">
+            <StackPanel Width="754" HorizontalAlignment="Right">
+
+                <TextBox x:Name="tbErrandName" HorizontalAlignment="Left" Text="{Binding ErrandName}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Errand Name" FontSize="14" />
+                <TextBox x:Name="tbStartDate" HorizontalAlignment="Left" Text="{Binding ErrandStartDate}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Start date (YYYY-MM-DD)" FontSize="14"/>
+                <TextBox x:Name="tbEndDate" HorizontalAlignment="Left" Text="{Binding ErrandEndDate}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="End date (YYYY-MM-DD)" FontSize="14"/>
+                <TextBox Text="Status:" HorizontalAlignment="Left" Margin="430,20,0,0" Width="44"  FontSize="14"/>
+
+                <CheckBox x:Name="cbStatusFinished" HorizontalAlignment="Right" Margin="0,-25,180,0" Width="80" Content="Finished" FontSize="14" Height="21"/>
+                <TextBox x:Name="tbComponent" HorizontalAlignment="Left" Text="Components needed:" Margin="430,-5,0,0" Width="139" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                <ComboBox x:Name="InvComboBoxNeed" Width="91" HorizontalAlignment="Right" Margin="0,-28,85,0" SelectionChanged="InvComboBoxNeed_SelectionChanged">
+                    <ComboBoxItem Content="CarTires"></ComboBoxItem>
+                    <ComboBoxItem Content="CarBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="CarMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="CarWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="CarVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="MCTires"></ComboBoxItem>
+                    <ComboBoxItem Content="MCBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="MCMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="MCWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="MCVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="BusTires"></ComboBoxItem>
+                    <ComboBoxItem Content="BusBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="BusMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="BusWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="BusVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckTires"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckVehicle bodies"></ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="tbComponentReturned" HorizontalAlignment="Left" Text="Components returned" Margin="430 0 0 0" Width="139" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                <ComboBox x:Name="InvComboBoxReturned" Width="91" HorizontalAlignment="Right" Margin="0,-28,85,0" SelectionChanged="InvComboBoxReturned_SelectionChanged">
+                    <ComboBoxItem Content="CarTires"></ComboBoxItem>
+                    <ComboBoxItem Content="CarBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="CarMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="CarWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="CarVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="MCTires"></ComboBoxItem>
+                    <ComboBoxItem Content="MCBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="MCMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="MCWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="MCVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="BusTires"></ComboBoxItem>
+                    <ComboBoxItem Content="BusBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="BusMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="BusWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="BusVehicle bodies"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckTires"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckBrakes"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckMotors"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckWindshields"></ComboBoxItem>
+                    <ComboBoxItem Content="TruckVehicle bodies"></ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="tbVehicle" HorizontalAlignment="Left" Text="Vehicle:" Margin="430 0 0 0" Width="139" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                <ComboBox x:Name="VehicleComboBox" Width="91" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-28,85,0">
+                    <ComboBoxItem Content="Car"></ComboBoxItem>
+                    <ComboBoxItem Content="Motorcycle"></ComboBoxItem>
+                    <ComboBoxItem Content="Bus"></ComboBoxItem>
+                    <ComboBoxItem Content="Truck"></ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="tbTypeOfCar" HorizontalAlignment="Left" Text="Type of car:" Margin="430 0 0 0" Width="139" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                <ComboBox x:Name="TypeCarComboBox" Width="91" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-28,85,0">
+                    <ComboBoxItem Content="Sedan"></ComboBoxItem>
+                    <ComboBoxItem Content="Station wagon"></ComboBoxItem>
+                    <ComboBoxItem Content="Convertible"></ComboBoxItem>
+                    <ComboBoxItem Content="Hatchback"></ComboBoxItem>
+                    <ComboBoxItem Content=""></ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="tbModel" HorizontalAlignment="Left" Text="{Binding ModelName}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Model" FontSize="14"/>
+                <TextBox x:Name="tbRegistrationNumber" HorizontalAlignment="Left" Text="{Binding RegistrationNumber}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Registration number" FontSize="14"/>
+                <TextBox x:Name="tbOdometer" HorizontalAlignment="Left" Text="{Binding Odometer}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Odometer (total miles)" FontSize="14"/>
+                <TextBox x:Name="tbRegistrationDate" HorizontalAlignment="Left" Text="{Binding RegistrationDate}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Registration date" FontSize="14"/>
+                <TextBox x:Name="tbPropellant" HorizontalAlignment="Left" Text="Propellant:" Margin="430,0,0,0" Width="139" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+                <ComboBox x:Name="TypePropellantComboBox" Width="91" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-28,85,0">
+                    <ComboBoxItem Content="Electric"></ComboBoxItem>
+                    <ComboBoxItem Content="Petrol"></ComboBoxItem>
+                    <ComboBoxItem Content="Diesel"></ComboBoxItem>
+                    <ComboBoxItem Content="Ethanol"></ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="tbHasTowbar" HorizontalAlignment="Left" Text="{Binding HasTowbar}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Has towbar (Yes/No)" FontSize="14"/>
+                <TextBox x:Name="tbMaxNrPass" HorizontalAlignment="Left" Text="{Binding MaxNrPassengers}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Max number of passengers" FontSize="14"/>
+                <TextBox x:Name="tbMaxLoad" HorizontalAlignment="Left" Text="{Binding MaxLoad}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Max load" FontSize="14"/>
+                <TextBox x:Name="tbDescription" HorizontalAlignment="Left" Text="{Binding Description}" Margin="430 0 0 0" Width="225" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Description" FontSize="14"/>
+                <TextBox x:Name="tbAmountNeed" Width="56" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Amount" FontSize="14" HorizontalAlignment="Right" Height="43" Margin="0,-1137,20,0"/>
+                <TextBox x:Name="tbAmount" Width="56" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Amount" FontSize="14" HorizontalAlignment="Right" Height="43" Margin="0,-1046,20,0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel>
+            <Button x:Name="ErrandEditGoBackButton" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="#FFFF5500" Margin="-700,20,0,0" Click="ErrandEditGoBackButton_Click">
+                <materialDesign:PackIcon Kind="ArrowBackCircle" Width="30" Height="30" Foreground="#FFFF5500" ></materialDesign:PackIcon>
+
+            </Button>
+            <TextBlock Width="100" Height="20" Margin="-550 -30 0 0" Text="GO BACK"></TextBlock>
+            <TextBlock Width="100" Text="Old" FontWeight="ExtraBold" TextAlignment="Center" HorizontalAlignment="Left" FontSize="26" Margin="150,-35,0,0" Height="35"></TextBlock>
+            <TextBlock Width="100" Text="New" TextAlignment="Center" FontSize="26" Margin="400,-35,0,0" FontWeight="ExtraBold"></TextBlock>
+            <Button x:Name="EditErrandButton" Width="100" Content="DONE" Foreground="#FF222222" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" Click="EditErrandButton_Click" VerticalAlignment="Stretch" Margin="0,0,50,-900" HorizontalAlignment="Right"></Button>
+        </StackPanel>
+    </Grid>
+
+</UserControl>
