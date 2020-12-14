@@ -10,6 +10,7 @@ using System;
 using System.Windows;
 using static Logic.DAL.GenericClass;
 using Logic.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace GUI.UserControls
 {
@@ -38,7 +39,39 @@ namespace GUI.UserControls
 
         private async void EditMechanicButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            if(tbFirstName2.Text == null || tbFirstName2.Text == "")
+            {
+                MessageBox.Show("Ange namn.");
+                return;
+            }
+            if (tbSurName2.Text == null || tbSurName2.Text == "")
+            {
+                MessageBox.Show("Ange efternamn.");
+                return;
+            }
+            if (tbSurName2.Text == null || tbSurName2.Text == "")
+            {
+                MessageBox.Show("Ange efternamn.");
+                return;
+            }
+            if (!Regex.IsMatch(tbDateOfBirth2.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
+            {
+                MessageBox.Show("Ange gilltigt födelsedatum. YYYY-MM-DD");
+                return;
+            }
 
+            if (!Regex.IsMatch(tbDateOfEmployment2.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
+            {
+                MessageBox.Show("Ange gilltigt datum för ärende start. YYYY-MM-DD");
+                return;
+            }
+
+            if (!Regex.IsMatch(tbEmploymentEnds2.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
+            {
+                MessageBox.Show("Ange gilltigt datum för ärende slut. YYYY-MM-DD");
+                return;
+            }
+            
             Mechanic selectedMechanic = _selectedMechanic;
 
             Guid CurrentMechID = selectedMechanic.MechID;

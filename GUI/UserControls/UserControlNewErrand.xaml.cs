@@ -106,25 +106,30 @@ namespace GUI.UserControls
 
             if (!Regex.IsMatch(tbRegistrationDate.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
             {
-                MessageBox.Show("Enter a valid date for Registration Date. YYYY-MM-DD");
+                MessageBox.Show("Ange gilltigt datum för registrering. YYYY-MM-DD");
                 return;
             }
 
             if (!Regex.IsMatch(tbErrandStart.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
             {
-                MessageBox.Show("Enter a valid date for Errand Start. YYYY-MM-DD");
+                MessageBox.Show("Ange gilltigt datum för ärende start. YYYY-MM-DD");
                 return;
             }
 
             if (!Regex.IsMatch(tbErrandEnd.Text, @"^\d{4}-((0\d)|(1[012]))-(([012]\d)|3[01])$"))
             {
-                MessageBox.Show("Enter a valid date for Errand End. YYYY-MM-DD");
+                MessageBox.Show("Ange gilltigt datum för ärende slut. YYYY-MM-DD");
+                return;
+            }
+            if(tbRegistrationNumber.Text == null || tbRegistrationNumber.Text == "")
+            {
+                MessageBox.Show("Ange registreringsnummer.");
                 return;
             }
 
             if (!Regex.IsMatch(tbRegistrationNumber.Text, @"^[A-Z0-9]*$"))
             {
-                MessageBox.Show("Invalid Registration number. The letters must be in capitals A-Z");
+                MessageBox.Show("Ogilltigt registreringsnummer. Måste innehålla stora bokstäver A-Z");
                 return;
             }
 
@@ -185,7 +190,7 @@ namespace GUI.UserControls
 
             if (string.IsNullOrEmpty(tbErrandName.Text) || string.IsNullOrEmpty(tbModel.Text) || string.IsNullOrEmpty(tbHasTowbar.Text) || string.IsNullOrEmpty(tbDescription.Text))
             {
-                MessageBox.Show("Ange Namn, model, dragkrok och beskrivning.");
+                MessageBox.Show("Ange namn, model, dragkrok och beskrivning.");
                 return;
             }
 
